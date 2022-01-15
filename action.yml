@@ -7,7 +7,7 @@ inputs:
   token:
     description: 'GitHub token'
     required: false
-    default: '${{secrets.GITHUB_TOKEN}}'
+    default: ${{secrets.GITHUB_TOKEN}}
   label:
     description: 'PR label'
     required: false
