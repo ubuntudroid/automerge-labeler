@@ -4,11 +4,12 @@ GitHub action which labels pull requests with are scheduled to be auto-merged fo
 
 # Setup
 
-Create a new workflow file which looks like this:
+Create a new workflow file (e.g. *automerge-labeler.yml*) with the following content:
 
 ```yml
+# This workflow labels PRs for which automerge is enabled with a label so that we can easily spot them in the PR overview UI.
+
 name: Label auto-merge PRs
-description: 'This workflow labels PRs for which automerge is enabled with a label so that we can easily spot them in the PR overview UI.'
 
 on:
   pull_request:
@@ -27,4 +28,4 @@ jobs:
 
 # Honorable mentions
 
-This action uses the [add-remove-label action](buildsville/add-remove-label).
+This action uses the awesome [add-remove-label action](buildsville/add-remove-label).
