@@ -25,4 +25,4 @@ runs:
       with:
         token: ${{ inputs.token }}
         label: ${{ inputs.label }}
-        type: remove'
+        type: remove
