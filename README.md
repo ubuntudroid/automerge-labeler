@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: ubuntudroid/automerge-labeler@v1
         with:
-          token: ${{secrets.GITHUB_TOKEN}} # optional
+          token: ${{ secrets.GITHUB_TOKEN }}
           label: 'auto-merge' # optional
 ```
 
