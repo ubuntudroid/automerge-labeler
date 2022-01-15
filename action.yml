@@ -1,5 +1,8 @@
 name: Label auto-merge PRs
 description: 'Labels pull requests with are scheduled to be auto-merged for better visibility in the pull request overview'
+branding:
+  icon: git-pull-request
+  color: yellow
 inputs:
   token:
     description: 'GitHub token'
