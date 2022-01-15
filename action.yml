@@ -1,0 +1,26 @@
+name: Label auto-merge PRs
+description: 'Labels pull requests with are scheduled to be auto-merged for better visibility in the pull request overview'
+inputs:
+  token:
+    description: 'GitHub token'
+    required: false
+    default: '${{secrets.GITHUB_TOKEN}}'
+  label:
+    description: 'PR label'
+    required: false
+    default: 'auto-merge'
+runs:
+  using: "composite"
+  steps:
+    - uses: buildsville/add-remove-label@v1
+      if: github.event.action == 'auto_merge_enabled'
+      with:
+        token: ${{ inputs.token }}
+        label: ${{ inputs.label }}
+        type: add
+    - uses: buildsville/add-remove-label@v1
+      if: github.event.action == 'auto_merge_disabled'
+      with:
+        token: ${{ inputs.token }}
+        label: ${{ inputs.label }}
+        type: remove'
