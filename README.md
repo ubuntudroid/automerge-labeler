@@ -1,6 +1,6 @@
 # automerge-labeler
 
-GitHub action which labels pull requests with are scheduled to be auto-merged for better visibility in the pull request overview.
+GitHub action which labels pull requests scheduled to be auto-merged for better visibility in the pull request overview.
 
 # Setup
 
