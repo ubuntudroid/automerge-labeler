@@ -12,8 +12,6 @@ Create a new workflow file (e.g. *automerge-labeler.yml*) with the following con
 name: Label auto-merge PRs
 
 on:
-  pull_request:
-    branches: [ main ] # target branch for your PRs
   pull_request_target:
     types: [ auto_merge_enabled, auto_merge_disabled ]
 jobs:
